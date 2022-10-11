@@ -1,1 +1,47 @@
-print("https://pastebin.com/raw/j2Y8LViy)
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Geekin Studios", "Synapse")
+
+-- MAIN
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("Main")
+
+
+MainSection:NewButton("Legit Mags", "Mags when ball in close range but should be turned off if voted qb", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/zG16C2VG'))()
+end)
+
+
+-- Player
+local Player = Window:NewTab("Player")
+local PlayerSection = Player:NewSection("Player")
+
+PlayerSection:NewSlider("Walkspeed", "SPEED AT YOUR OWN RISH !!", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+PlayerSection:NewSlider("JumpPower", "JUMP AT YOUR OWN RISH !!", 350, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+PlayerSection:NewButton("Reset WS/JP", "Resets ti akk defaults !!", 350, 50, function()
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50 
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+end)
+
+
+-- Free
+local Free = Window:NewTab("Free")
+local FreeSection = Free:NewSection("Free")
+
+
+FreeSection:NewButton("Give's Free GamePasses", "Give's you the gamepass", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/rnbwhBhq'))()
+end)
+
+game:GetService("StarterGui"):SetCore("SendNotification",{
+    Title = "Notification Title", -- Required
+    Text = "Notification Description", -- Required
+    Icon = "rbxassetid://1234567890" -- Optional
+})
+
+setclipboard("https://discord.gg/GdCYFSzz8M")
